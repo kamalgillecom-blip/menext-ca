@@ -1,6 +1,5 @@
 const nextConfig = {
   allowedDevOrigins: ["*.preview.same-app.com"],
-  assetPrefix: '/static',
   images: {
     unoptimized: true,
     domains: [
