@@ -1,7 +1,5 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   allowedDevOrigins: ["*.preview.same-app.com"],
-  output: 'export',
   assetPrefix: '/static',
   images: {
     unoptimized: true,
