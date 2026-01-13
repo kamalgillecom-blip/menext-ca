@@ -14,16 +14,11 @@ export function Header() {
         <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/brand-logo.png"
-                alt="MeNext.ca"
-                width={150}
-                height={40}
-                className="h-12 w-auto"
-                priority
-              />
-            </Link>
+            <img
+              src="/brand-logo.png"
+              alt="MeNext.ca"
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop CTA Buttons */}
