@@ -9,18 +9,18 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0c4683]">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-32 pt-4 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/logo-white.png"
                 alt="MeNext.ca"
-                width={180}
-                height={50}
-                className="h-24 w-auto mt-4"
+                width={150}
+                height={40}
+                className="h-12 w-auto"
                 priority
               />
             </Link>
