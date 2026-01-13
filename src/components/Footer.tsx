@@ -111,9 +111,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-sm">
-              MeNext 2026 All Rights Reserved
-            </p>
+            <p className="text-white/50 text-sm">MeNext 2026 All Rights Reserved (v1.2)</p>
             <div className="flex gap-6">
               <Link href="#" className="text-white/50 hover:text-white text-sm transition-colors">
                 Terms of Use
