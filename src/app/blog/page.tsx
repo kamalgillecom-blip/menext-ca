@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { blogPosts } from '@/lib/blogData';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
 
 export const metadata = {
     title: 'Blog | MeNext.ca - Insights for Canadian Medical Clinics',

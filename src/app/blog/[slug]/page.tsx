@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/blogData';
-import Header from '../../../components/Header';
-import Footer from '../../../components/Footer';
+import { Header } from '../../../components/Header';
+import { Footer } from '../../../components/Footer';
 import Link from 'next/link';
 
+// Next.js 15: params is a Promise
 interface BlogPostProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 // Generate static params for all blog posts
@@ -17,8 +18,9 @@ export async function generateStaticParams() {
     }));
 }
 
-export function generateMetadata({ params }: BlogPostProps) {
-    const post = blogPosts.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: BlogPostProps) {
+    const { slug } = await params;
+    const post = blogPosts.find((p) => p.slug === slug);
     if (!post) return { title: 'Post Not Found' };
 
     return {
@@ -27,8 +29,9 @@ export function generateMetadata({ params }: BlogPostProps) {
     };
 }
 
-export default function BlogPostPage({ params }: BlogPostProps) {
-    const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: BlogPostProps) {
+    const { slug } = await params;
+    const post = blogPosts.find((p) => p.slug === slug);
 
     if (!post) {
         notFound();
