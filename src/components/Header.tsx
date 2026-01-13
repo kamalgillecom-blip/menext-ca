@@ -16,7 +16,7 @@ export function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo-white.png"
+                src="/brand-logo.png"
                 alt="MeNext.ca"
                 width={150}
                 height={40}
